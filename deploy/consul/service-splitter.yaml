@@ -1,0 +1,12 @@
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceSplitter
+metadata:
+  name: chuck-norris-app
+spec:
+  splits:
+    - weight: 5
+      service: chuck-norris-app
+      serviceSubset: v1
+    - weight: 95
+      service: chuck-norris-app
+      serviceSubset: v2

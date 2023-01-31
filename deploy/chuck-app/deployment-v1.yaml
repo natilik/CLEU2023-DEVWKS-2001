@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: chuck-norris-app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: chuck-norris-app
+    version: v1
+  name: chuck-norris-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chuck-norris-app
+      version: v1
+  template:
+    metadata:
+      annotations:
+        consul.hashicorp.com/connect-inject: 'true'
+        consul.hashicorp.com/service-meta-version: v1
+        consul.hashicorp.com/service-tags: v1
+      labels:
+        app: chuck-norris-app
+        version: v1
+    spec:
+      containers:
+      - image: maty0609/clus2022-chuck-app:v1
+        name: chuck-norris-app
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: http
+      restartPolicy: Always
+      serviceAccountName: chuck-norris-app
