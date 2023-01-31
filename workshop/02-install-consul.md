@@ -35,7 +35,7 @@ EOF
 Clone workshop Git repository:
 ```bash
 cd /root
-git clone https://github.com/natilik/CLUS2022-DEVWKS-1930.git
+git clone https://github.com/natilik/CLEU2023-DEVWKS-2001.git
 ```
 
 ## Install Consul
@@ -113,7 +113,7 @@ helm repo add grafana https://grafana.github.io/helm-charts
 
 To install Grafana we will use Helm values from this file:
 ```bash
-cat /root/CLUS2022-DEVWKS-1930/deploy/grafana/values.yaml
+cat /root/CLEU2023-DEVWKS-2001/deploy/grafana/values.yaml
 ```
 
 ```yaml
@@ -153,7 +153,7 @@ dashboards:
 
 Let's install Grafana with Helm:
 ```bash
-helm install grafana grafana/grafana -f /root/CLUS2022-DEVWKS-1930/deploy/grafana/values.yaml
+helm install grafana grafana/grafana -f /root/CLEU2023-DEVWKS-2001/deploy/grafana/values.yaml
 ```
 
 You can check the progress with the command:
