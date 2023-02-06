@@ -8,7 +8,7 @@ In this part we will be doing following tasks:
 Blue green deployment is an application release model that gradually transfers user traffic from a previous version of an app or microservice to a nearly identical new release. To transfer the traffic between two different version we will need to split the traffic. Traffic splitting makes use of configuration entries to centrally configure services and Envoy proxies.
 
 ## Deploy Service Resolver and Splitter
-Leet's start with Service defaults for the API service to set the protocol to HTTP:
+Let's start with Service defaults for the API service to set the protocol to HTTP:
 ```bash
 cat > chuck-norris-app-service-default.yaml <<EOF
 apiVersion: consul.hashicorp.com/v1alpha1
