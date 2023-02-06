@@ -6,7 +6,7 @@ As the Modern application increases in complexity with deployment cycles getting
 
 Across this workshop we will guide you through an approach to build basic continuous delivery for Kubernetes and accelerate the development of your applications. This approach will aim to and make it easier for developers to deploy new application's feature into the wild in a controlled fashion.
 
-This session start with deploying Flux to automate deployment of your application in Kubernetes. The application will be fully service meshed with Consul and provide some important metrics presented by Prometheus and Grafana.
+The application will be fully service meshed with Consul and provide some important metrics presented by Prometheus and Grafana.
 
 Looking forward the session will look towards the next step of this setup, allowing you to run canary deployments with Consul with Prometheus and Grafana providing your application metrics across the new deployment.
 
